@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Image Rescue",
+    "description": "Keeps oversized images usable: instead of refusing the prompt, stores the untouched original as a file and gives the model its path."
+  }
+}

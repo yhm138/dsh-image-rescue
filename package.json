@@ -1,0 +1,53 @@
+{
+  "name": "dsh-image-rescue",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness Host plugin: when an attached image exceeds the vision limits, admit it as a byte-exact file and hand the model its path instead of rejecting the whole prompt.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "dsh",
+    "image",
+    "attachment",
+    "vision",
+    "8192",
+    "pdf"
+  ],
+  "license": "MIT",
+  "author": "yhm138",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhm138/dsh-image-rescue.git"
+  },
+  "homepage": "https://github.com/yhm138/dsh-image-rescue#readme",
+  "bugs": {
+    "url": "https://github.com/yhm138/dsh-image-rescue/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
