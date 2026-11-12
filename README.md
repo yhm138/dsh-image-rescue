@@ -39,7 +39,8 @@ dsh plugin --profile <profile> add /path/to/dsh-image-rescue
 
 此外仓库内 `npm test`（13 项单元测试）与一份针对真实 `@deepseek-ai/dsh-attachment-local`
 的集成测试（21 项断言：基线拒收、救回后字节一致、`readFileStream` 校验、损坏图片仍报错、
-数量超限救回、卸载后恢复原生行为）全部通过。
+数量超限救回、卸载后恢复原生行为）全部通过。完整的证据记录见
+[`docs/verification.md`](docs/verification.md)。
 
 ## 配置（全部可选）
 
